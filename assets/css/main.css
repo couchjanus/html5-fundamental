@@ -344,3 +344,14 @@ input[type="radio"] {
 
 input[type="checkbox"] { display: inline; }
 
+    
+.featured:hover{
+    background: #fff;
+    border: #93b876 solid 5px;
+}
+
+.featured:hover i{
+    color: #93B876;
+    font-weight: 800;
+    
+}
