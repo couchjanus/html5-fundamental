@@ -241,3 +241,198 @@
    color: #fff;
    background: #93B876;
 }
+
+
+
+@media only screen and (max-width: 767px) {
+
+    .row {
+       width: 480px;
+       margin: 0 auto;
+       padding: 0;
+     }
+    .column, .columns {
+        width: auto !important;      
+        float: none;
+        margin-left: 0;
+        margin-right: 0;
+       padding: 0 30px;
+    }
+    .row .row { 
+        width: auto; 
+        max-width: none; 
+        margin: 0 -30px; 
+    }
+
+ }
+ 
+
+/* screenwidth less than or equal 480px - mobile wide
+--------------------------------------------------------------- */
+@media only screen and (max-width: 480px) {
+
+    .row { width: auto; }
+ 
+ }
+/* larger screens
+--------------------------------------------------------------- */
+@media screen and (min-width: 1200px) {
+
+    .wide .row { max-width: 1180px; }
+ 
+ }
+  
+/* screenwidth less than 768px - mobile/smaller tablets
+---------------------------------------------------------------------- */
+@media only screen and (max-width: 767px) {
+
+/* footer 
+	-------------------------------------------------------------- */
+	.footer .social-links { 
+        margin-bottom: 36px; 
+    }
+	.footer .social-links li {
+		font-size: 28px;
+		line-height: 42px;	
+		margin: 0 8px;
+	}
+	.footer .navigate { margin-bottom: 30px; }
+	.footer .navigate li {
+		display: inline-block;
+		margin-right: 18px;
+		line-height: 30px;
+	}
+	.footer .copyright {
+		border-top: 1px solid #DFDBDB;
+		padding: 24px 30px 6px 30px;
+	}
+}
+
+
+/* screenwidth less than or equal 1024px
+--------------------------------------------------------------------- */
+@media only screen and (max-width: 1024px) {
+
+	/* header styles 
+	-------------------------------------------------------------- */
+	.header h1.logo-text { 		
+		top: 114px; 
+		left: 18px;	
+	}
+	.header h1.logo-text a {	 		
+		font: normal 68px Georgia, Serif;
+		letter-spacing: -4px;	
+	} 
+
+	/* sidebar 
+	-------------------------------------------------------------- */
+   .sidebar { padding-left: 18px; }
+
+}
+/* screenwidth less than or equal 900px
+--------------------------------------------------------------------- */
+@media only screen and (max-width: 900px) {
+
+	/* header styles 
+	-------------------------------------------------------------- */
+	.header .header-content {
+		background: #fff;	
+		background-size: 330px 234px;
+	}	
+	.header h1.logo-text a {	 		
+		font: normal 60px Georgia, Serif;		
+	} 
+	.header p.intro {			
+		font: 15px/24px 'opensans-light', Georgia, Serif;		
+		top: 183px; 
+		left: 30px;		
+	}   
+
+}
+
+
+/* screenwidth less than 768px - mobile/smaller tablets
+---------------------------------------------------------------------- */
+@media only screen and (max-width: 767px) {
+
+	/* header styles 
+	-------------------------------------------------------------- */
+	.header,
+	.header .header-content { 
+		height: 276px;      
+	}
+	.header .header-content {
+        background: #fff url(../../images/bgcat.png) no-repeat  50% top;
+		padding: 0;	
+		border: none;
+	}
+	.header h1.logo-text,
+	.header p.intro {
+		width: 100%;
+		text-align: center;
+		position: static;
+	}
+	.header h1.logo-text { padding-top: 108px;	}
+	.header h1.logo-text a {	 		
+		font: normal 56px Georgia, Serif;	
+		letter-spacing: -3.5px;	
+	} 
+	.header p.intro {			
+		font: 15px/24px 'opensans-light', Georgia, Serif;			
+    }
+    
+    /* content 
+	-------------------------------------------------------------- */
+	.content-wrap { padding-top: 0; }
+	.content-wrap  .main { padding-right: 30px;}	
+
+	.page h2,
+	.entry h2,
+	.entry h2 a {
+		font: 28px/36px 'opensans-semibold', sans-serif;	
+		letter-spacing: -.5px;
+	}
+
+	.entry h2,
+	.entry .entry-meta,
+	.page h2 {
+		text-align: center;
+	}
+
+	/* sidebar 
+	-------------------------------------------------------------- */
+	.sidebar { padding-left: 30px; }
+
+	/* categories */
+	.sidebar .widget_categories ul {	margin-bottom: 12px;	}
+	.sidebar .widget_categories ul li {
+		display: inline-block;
+		margin-right: 6px;
+	}
+
+	/* entry 
+	-------------------------------------------------------------- */
+	.entry .entry-meta ul { margin-top: 9px; }
+	.entry .entry-meta ul li { }
+
+	/* tags */
+	.tags { text-align: center; }
+
+	/* post-nav */
+   .post-nav { margin-top: 18px; }
+   .post-nav li {
+      display: block;
+      margin: 0 0 18px 0;
+      width: 100%;
+   }
+   .post-nav li.next {
+      float: none;
+      text-align: center;
+   }
+   .post-nav li.prev {
+      float: none;
+      text-align: center;
+   }
+
+	
+}

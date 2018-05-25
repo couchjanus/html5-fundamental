@@ -35,7 +35,9 @@ time, mark, audio, video {
    box-sizing: border-box;
 }
 
-
+img {
+    max-width: 100%;
+}
 html {
     font-size: 14px;
 }
@@ -171,6 +173,33 @@ ul.nav li.current > a {
  }
 
 .footer .social-links li:first-child { margin-left: 0; }
+
+/* Photostream */
+.footer .photostream {
+    list-style: none;
+    margin: 12px 0 24px -15px;
+    padding: 0;
+    overflow: hidden;
+ }
+ .footer .photostream li {
+    display: inline-block;
+    margin: 0 0 12px 12px;
+    padding: 0;
+ }
+ 
+ .footer .photostream li a { 
+     display: block; 
+     height: 60px;
+    width: 60px;
+    background: #fff;
+    padding: 9px;
+    border: 1px solid #E9E9E9;
+    border-radius: 3px;
+ }
+ .footer .photostream li a img {   
+    vertical-align: bottom;
+ }
+
 
 /* default */
 .row {
