@@ -1,0 +1,39 @@
+html {
+    font-size: 1rem;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    
+    margin-bottom: 160px; /* Margin bottom by footer height */
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+ /* Custom page CSS */
+        
+.container {
+    width: auto;
+    /* max-width: 900px; */
+    padding: 0 15px;
+}
+
+img {
+    max-width: 100%;
+}
+
+aside {
+    --my-font: Helvetica, Arial, sans-serif;
+ }
+
+:root {
+    --jumbotron-padding-y: 3rem;
+}
+  

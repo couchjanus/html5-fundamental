@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <link href="assets/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <title>Hello, world!</title>
+
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+
+    <style>
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 160px; /* Set the fixed height of the footer here */
+            line-height: 60px; /* Vertically center the text there */
+            background-color: #f5f5f5;
+        }
+        .col { 
+            border: 1px solid transparent; 
+        } 
+        
+        h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h2 {
+  color: #292929;
+  font-weight: 600;
+}
+
+h4 {
+  color: #292929;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+a {
+  color: #292929;
+  text-decoration: none !important;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+a:hover {
+  transition: all 0.5s ease-in-out 0s;
+}
+
+a:hover, a:focus {
+  color: #b8a07e;
+  text-decoration: underline;
+}
+
+/*  Aout-us */
+
+#about {
+  width: 100%;
+  height: auto;
+  background: #f7f7f7;
+  padding-top: 190px;
+}
+
+#about .div-img-bg {
+  padding-bottom: 30px;
+  border: 20px solid #b8a07e;
+}
+
+#about .div-img-bg .about-img img {
+  width: 100%;
+  box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.14);
+  margin-top: -60px;
+  margin-left: 40px;
+  height: 400px;
+  object-fit: cover;
+}
+
+#about .about-descr .p-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  text-align: left;
+}
+
+#about .about-descr .separator {
+  max-width: 80%;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.paddsection {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.paddsections {
+  padding-top: 90px;
+  padding-bottom: 90px !important;
+}
+/*  Portfolio */
+
+.portfolio-list {
+  margin-bottom: 50px;
+}
+
+.portfolio-list .nav {
+  display: inline-block;
+  margin: 0;
+}
+
+.portfolio-list .nav li {
+  margin: 0 40px 0 0;
+  float: left;
+  font-size: 14px;
+  color: #999999;
+  line-height: 16px;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.portfolio-list .nav li:hover, .portfolio-list .nav li.filter-active  {
+  color: #b8a07e;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+
+.portfolio-thumbnail {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.portfolio-thumbnail img {
+  max-width: 100%;
+}
+
+.jumbotron {
+  padding-top: var(--jumbotron-padding-y);
+  padding-bottom: var(--jumbotron-padding-y);
+  margin-bottom: 0;
+  background-color: #fff;
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+
+
+.socials-media {
+  width: 100%;
+}
+
+.socials-media ul {
+  display: inline-block;
+  float: none;
+  margin: 0 0 20px 0;
+}
+
+.socials-media ul li {
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.socials-media ul li a {
+  font-size: 24px;
+  color: #999;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  background: transparent;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.socials-media ul li a:hover {
+  color: #b8a07e;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+    </style>
+  </head>
+
+    
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#"><img src="images/logo.png"  height="30" alt="LOGO"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline mt-2 mt-md-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+        
+    <!-- start section about us -->
+    <section id="about" class="paddsection">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-4 ">
+                        <div class="div-img-bg">
+                            <div class="about-img">
+                            <img src="images/cat6.jpg" class="img-responsive" alt="me">
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="col-8">
+                        <div class="about-descr">
+                            <p class="p-heading">I'm a ux /ui designer Cat based who loves clean, simple & unique design. i also enjoy crafting brand identities, icons, & ilustration work. </p>
+                            <p class="separator">To an English cats, it will seem like simplified English, as a skeptical Cheshire friend of mine told me what Occidental is. The European cats are members of the same family Cheshire cats.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- end section about us -->
+
+    
+    <!-- start section portfolio -->
+    <section id="portfolio" class="text-center paddsection">
+        <div role="main">
+
+            <section class="jumbotron text-center">
+                <div class="container">
+                    <h1 class="jumbotron-heading">My Portfolio</h1>
+                    <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+                    <p>
+                        <a href="#" class="btn btn-primary my-2">Main call to action</a>
+                          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+                    </p>
+                    <div class="portfolio-list">
+                        <ul class="nav list-unstyled" id="portfolio-flters">
+                              <li class="filter filter-active" data-filter=".all">all</li>
+                              <li class="filter" data-filter=".branding">branding</li>
+                              <li class="filter" data-filter=".mockups">mockups</li>
+                              <li class="filter" data-filter=".uikits">ui kits</li>
+                              <li class="filter" data-filter=".webdesign">web design</li>
+                              <li class="filter" data-filter=".photography">photography</li>
+                        </ul>
+                    </div>
+            
+                </div>
+            </section>
+    
+            <div class="album py-5 bg-light">
+                <div class="container">
+              
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-4 box-shadow">
+                              <img class="card-img-top" src="images/01.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                  <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                  </div>
+                                  <small class="text-muted">9 mins</small>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 box-shadow">
+                              <img class="card-img-top" src="images/02.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                  <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                  </div>
+                                  <small class="text-muted">9 mins</small>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 box-shadow">
+                              <img class="card-img-top" src="images/03.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                  <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                  </div>
+                                  <small class="text-muted">9 mins</small>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+              
+                          <div class="col-md-4">
+                            <div class="card mb-4 box-shadow">
+                              <img class="card-img-top" src="images/04.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                  <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                  </div>
+                                  <small class="text-muted">9 mins</small>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="card mb-4 box-shadow">
+                              <img class="card-img-top" src="images/05.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                  <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                  </div>
+                                  <small class="text-muted">9 mins</small>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="card mb-4 box-shadow">
+                              <img class="card-img-top" src="images/06.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                  <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                  </div>
+                                  <small class="text-muted">9 mins</small>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+              
+                          <div class="col-md-4">
+                            <div class="card mb-4 box-shadow">
+                              <img class="card-img-top" src="images/01.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                  <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                  </div>
+                                  <small class="text-muted">9 mins</small>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="card mb-4 box-shadow">
+                              <img class="card-img-top"  src="images/03.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                  <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                  </div>
+                                  <small class="text-muted">9 mins</small>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="card mb-4 box-shadow">
+                              <img class="card-img-top" src="images/02.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                  <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                  </div>
+                                  <small class="text-muted">9 mins</small>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+            </div>
+              
+        </div>
+        <hr>
+
+        <div class="container">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><img class="card-img-top" src="images/cat2.jpg" alt="Card image cap"></div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><img class="card-img-top" src="images/cat1.jpg" alt="Card image cap"></div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><img class="card-img-top" src="images/cat3.jpg" alt="Card image cap"></div>
+                  </div>
+            </div>
+   <hr>        
+    </section>
+    <!-- End section portfolio -->
+    
+    
+              
+    <!-- start section footer -->
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <div class="socials-media text-center">
+                <ul class="list-unstyled">
+                        <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                        <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                        <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                        <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                        <li><a href="#"><i class="ion-social-tumblr"></i></a></li>
+                        <li><a href="#"><i class="ion-social-dribbble"></i></a></li>
+                </ul>
+            </div>
+            <span class="text-muted">&copy; Copyrights Red Cats. All rights reserved.</span>
+    
+          <div class="credits">
+            Designed by <a href="#">Red Cats Bootstrap</a>
+          </div>
+    
+        </div>
+        </footer>
+      <!-- End section footer -->
+    
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>
