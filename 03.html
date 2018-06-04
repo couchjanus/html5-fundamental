@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="assets/css/common.css">
+
+    <title>Hello, flex!</title>
+
+    <style>
+        .flex-container {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            /* Сначала создадим flex-контекст */
+            display: flex;
+
+            /* Теперь определим направление потока
+              * flex-direction: row | row-reverse | column | column-reverse
+              * Устанавливает главную ось main-axis, определяя тем самым направление для flex-элементов, размещаемых в контейнере.
+              * row (по умолчанию): слева направо для ltr, справа налево для rtl;
+              * row-reverse: справа налево для ltr, слева направо для rtl;
+              * column: аналогично row, сверху вниз;
+              * column-reverse: аналогично row-reverse, снизу вверх.
+            */
+
+            /* row (по умолчанию): слева направо для ltr, справа налево для rtl; */
+            flex-direction: row;
+            /* row-reverse: справа налево для ltr, слева направо для rtl; */
+            /* flex-direction:row-reverse; */
+            /* column: аналогично row, сверху вниз; */
+            /* flex-direction:column; */
+            /* column-reverse: аналогично row-reverse, снизу вверх. */
+            /* flex-direction:column-reverse; */
+            /* flex-direction:initial; */
+            /* flex-direction:unset; */
+        }
+        .flex-item {
+            background: tomato;
+            padding: 5px;
+            width: 200px;
+            height: 150px;
+            margin-top: 10px;
+            line-height: 150px;
+            text-align: center;
+        }
+
+
+
+    </style>
+
+  </head>
+  <body>
+
+    <h1>Hello, Cats!</h1>
+
+    <ul class="flex-container">
+            <li class="flex-item"><img src="images/cat1.jpg"></li>
+            <li class="flex-item"><img src="images/cat2.jpg"></li>
+            <li class="flex-item"><img src="images/cat3.jpg"></li>
+            <li class="flex-item"><img src="images/cat4.jpg"></li>
+            <li class="flex-item"><img src="images/cat5.jpg"></li>
+    </ul>
+
+  <!-- start section footer -->
+  <footer id="footer" class="footer text-center">
+    <span class="text-muted">&copy; Copyrights Red Cats. All rights reserved.</span>
+  </footer>
+
+  <!-- End section footer -->
+
+  </body>
+</html>
