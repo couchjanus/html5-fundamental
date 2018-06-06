@@ -4,53 +4,105 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link rel="stylesheet" href="assets/css/common.css">
-
-    <title>Hello, flex!</title>
-
+    <title>Hello, grid!</title>
     <style>
-        .flex-container {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            /* Сначала создадим flex-контекст */
-            display: flex;
+      .wrapper {
+        margin: 0 auto;
+        width: 90%;
+      }
 
-            /* Теперь определим направление потока и хотим ли мы, чтобы элементы
-                переносились на новую строку
-            */
-            flex-flow: row wrap;
-            /* Теперь определим, как будет распределяться пространство */
-            justify-content: space-around;
-        }
-        .flex-item {
-            background: tomato;
-            padding: 5px;
-            width: 200px;
-            height: 150px;
-            margin-top: 10px;
-            line-height: 150px;
-            text-align: center;
-        }
+      .cards {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
 
+      .cards li {
+        border: 2px solid #490A3D;
+        border-radius:5px;
+        background-color: #BD1550;
+        color: #fff;
+        flex: 1 1 200px;
+      }
 
+      .cards h2 {
+        background-color: #490A3D;
+        margin: 0;
+        padding: 10px;
+      }
+      .cards p {
+        padding: 10px;
+      }
+      .cards img {
+        padding: 10px;
+        max-width: 100%;
+      }
+      .grid-container div{
+          color:#fff;
+          font-size: 2em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .grid-container li:nth-child(1n){
+          background-color: #31DB33;
+      }
+      .grid-container li:nth-child(3n){
+          background-color: #7798AB;
+      }
+      .grid-container li:nth-child(2n){
+          background-color: #FF8966;
+      }
+      .grid-container{
+          display:grid;
+          grid-gap: 5px; 
+          grid-template: repeat(2,1fr) / repeat(3, minmax(200px,1fr));
+      }
 
     </style>
 
   </head>
   <body>
+    <div class="wrapper">
 
-    <h1>Hello, Cats!</h1>
+    <h1>Hello, Grids Cats!</h1>
 
-    <ul class="flex-container">
-            <li class="flex-item"><img src="images/cat1.jpg"></li>
-            <li class="flex-item"><img src="images/cat2.jpg"></li>
-            <li class="flex-item"><img src="images/cat3.jpg"></li>
-            <li class="flex-item"><img src="images/cat4.jpg"></li>
-            <li class="flex-item"><img src="images/cat5.jpg"></li>
-    </ul>
-
+    <ul class="grid-container cards">
+        <li>
+          <h2>Card 1</h2>
+          <div><img src="images/cat1.jpg"></div>
+          <p>Posuere varius ullamcorper ipsum adipiscing dignissim ipsum adipiscing a a quisque malesuada quam purus venenatis sagittis fermentum parturient curabitur montes a metus.
+          </p></li>
+        <li>
+          <h2>Card 2</h2>
+          
+          <div><img src="images/cat2.jpg"></div>
+          <p>Posuere varius ullamcorper ipsum adipiscing dignissim ipsum adipiscing a a quisque malesuada quam purus venenatis sagittis fermentum parturient curabitur montes a metus.
+          </p></li>
+        <li>
+          <h2>Card 3</h2>
+          
+          <div><img src="images/cat3.jpg"></div>
+          <p>Posuere varius ullamcorper ipsum adipiscing dignissim ipsum adipiscing a a quisque malesuada quam purus venenatis sagittis fermentum parturient curabitur montes a metus.
+          </p></li>
+        <li>
+          <h2>Card 4</h2>
+          
+          <div><img src="images/cat4.jpg"></div>
+          <p>Posuere varius ullamcorper ipsum adipiscing dignissim ipsum adipiscing a a quisque malesuada quam purus venenatis sagittis fermentum parturient curabitur montes a metus.
+          </p>
+        </li>
+        <li>
+          <h2>Card 5</h2>
+          
+          <div><img src="images/cat5.jpg"></div>
+          <p>Posuere varius ullamcorper ipsum adipiscing dignissim ipsum adipiscing a a quisque malesuada quam purus venenatis sagittis fermentum parturient curabitur montes a metus.
+          </p>
+        </li>
+      </ul>
+    
+  </div>
   <!-- start section footer -->
   <footer id="footer" class="footer text-center">
     <span class="text-muted">&copy; Copyrights Red Cats. All rights reserved.</span>

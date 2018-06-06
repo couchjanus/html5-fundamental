@@ -4,107 +4,130 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link rel="stylesheet" href="assets/css/common.css">
-
-    <title>Hello, flex!</title>
-
+    <title>Hello, grid!</title>
     <style>
-        .flex-container {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            /* Сначала создадим flex-контекст */
-            display: flex;
+      .wrapper {
+        margin: 0 auto;
+        width: 90%;
+      }
 
-            /* Теперь определим направление потока и хотим ли мы, чтобы элементы
-                переносились на новую строку
-            */
-            flex-flow: row wrap;
-            /* Теперь определим, как будет распределяться пространство */
-            justify-content: space-around;
-        }
-        .flex-item {
-            background: #CC6600;
-            padding: 5px;
-            width: 200px;
-            height: 150px;
-            margin-top: 10px;
-            line-height: 150px;
-            text-align: center;
-        }
+      .cards {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
 
-        .nav-menu {
-            background-color: #CC6600;
-            list-style: none;
-            margin: 0;
-            display: flex;
-            flex-flow: row wrap;
-            /* justify-content: flex-end; */
-            /* justify-content: flex-start; */
-            /* justify-content: center; */
-            /* justify-content: space-between; */
-            justify-content: space-around;
+      .cards li {
+        border: 2px solid #490A3D;
+        border-radius:5px;
+        background-color: #BD1550;
+        color: #fff;
+        flex: 1 1 200px;
+      }
 
-        }
+      .cards h2 {
+        background-color: #490A3D;
+        margin: 0;
+        padding: 10px;
+      }
+      .cards p {
+        padding: 10px;
+      }
+      .cards img {
+        padding: 10px;
+        max-width: 100%;
+      }
+      .grid-container div{
+          color:#fff;
+          font-size: 2em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .grid-container li:nth-child(1n){
+          background-color: #31DB33;
+      }
+      .grid-container li:nth-child(3n){
+          background-color: #7798AB;
+      }
+      .grid-container li:nth-child(2n){
+          background-color: #FF8966;
+      }
+      .grid-container{
+          display:grid;
+          grid-gap: 5px; 
+          grid-template: repeat(2,1fr) / repeat(3, minmax(200px,1fr));
+      }
 
-        .nav-item a {
-            color: #FFF;
-            display: block;
-            padding: 15px 20px;
-            text-decoration: none;
-        }
+    /*
+        You can use auto as well as fr on rows but it will work based on the height of parent element.
+    */
 
-        .nav-item a:hover,
-            .nav-item a:focus {
-            background-color: tomato;
-        }
+    .container{
+        height: 100%;
+        display:grid;    
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: 60px auto 140px; 
+        grid-gap: 5px;
+        /*
+            grid-template-areas:
+            "h h h h h h h h h h h h"
+            "m m c c c c c c c c c c"
+            "f f f f f f f f f f f f"
+                Naming your layout based on the available columns & rows. Similar letters should form a rectangle to work. Use '.' for blank cells.
+        */
+        grid-template-areas:
+            "h h h h h h h h h h h h"
+            "m m c c c c c c c c c c"
+            "f f f f f f f f f f f f"
+    }
+    .header{
+        /* Use the name defined in template-area to define element's area. It will take up that much rows & columns.  */
+        grid-area: h;
+    }
+    .menu{
+        grid-area: m;
+    }
+    .content{
+        grid-area: c;
+    }
+    .footer{
+        grid-area: f;
+    }
 
-        @media (max-width: 767px) {
-            .nav-menu {
-                flex-flow: column wrap;
-                justify-content: space-around;
-                padding: 0;
-            }
+    .container div{
+        color:#fff;
+        font-size: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container div:nth-child(1n){
+        background-color: #C1DBB3;
+    }
+    .container div:nth-child(3n){
+        background-color: #7798AB;
+    }
+    .container div:nth-child(2n){
+        background-color: #FF8966;
+    }
+    .container div:nth-child(4n){
+        background-color: #ffcc5c;
+    }
 
-            .nav-item a {
-                border-top: 1px solid rgba(255, 255, 255, 0.4);
-                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-                text-align: center;
-            }
-        }
 
     </style>
 
   </head>
   <body>
-        <header>
-            <nav>
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="#">Home</a></li>
-                    <li class="nav-item"><a href="#">About</a></li>
-                    <li class="nav-item"><a href="#">Contact</a></li>
-                    <li class="nav-item"><a href="#">Blog</a></li>
-                </ul>
-            </nav>
-        </header>
 
-    <h1>Hello, Cats!</h1>
-
-    <ul class="flex-container">
-            <li class="flex-item"><img src="images/cat1.jpg"></li>
-            <li class="flex-item"><img src="images/cat2.jpg"></li>
-            <li class="flex-item"><img src="images/cat3.jpg"></li>
-            <li class="flex-item"><img src="images/cat4.jpg"></li>
-            <li class="flex-item"><img src="images/cat5.jpg"></li>
-    </ul>
-
-  <!-- start section footer -->
-  <footer id="footer" class="footer text-center">
-    <span class="text-muted">&copy; Copyrights Red Cats. All rights reserved.</span>
-  </footer>
-
-  <!-- End section footer -->
-
+    <div class="container">
+        <div class="header">HEADER</div>
+        <div class="menu">MENU</div>
+        <div class="content">CONTENT</div>
+        <div class="footer">FOOTER</div>
+    </div>
+    
   </body>
 </html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <title>Hello, grid!</title>
+    <style>
+    body {
+    /* margin: 40px; */
+    }
+
+	.wrapper {
+        display: grid;
+        grid-gap: 10px;
+        width: 90%;
+        margin: 0 auto;
+        grid-template-columns: repeat(4, [col] 180px ) ;
+        grid-template-rows: repeat(2, [row] auto  );
+        background-color: #fff;
+        color: #444;
+	}
+
+	.box {
+		background-color: #444;
+		color: #fff;
+		border-radius: 5px;
+		padding: 20px;
+		font-size: 150%;
+
+	}
+
+	.box .box {
+		background-color: #ccc;
+		color: #444;
+	}
+
+	.a {
+		grid-column: col / span 2;
+		grid-row: row;
+	}
+
+	.b {
+		grid-column: col 3 / span 2;
+		grid-row: row;
+	}
+
+	.c {
+		grid-column: col / span 2;
+		grid-row: row 2;
+	}
+
+	.d{
+		grid-column: col 3 / span 2;
+		grid-row: row 2;
+		display: grid;
+    	grid-gap: 10px;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.e {
+		grid-column: 1 / 3;
+		grid-row: 1;
+	}
+
+	.f {
+		grid-column: 1;
+		grid-row: 2;
+	}
+
+	.g {
+		grid-column: 2;
+		grid-row: 2;
+    }
+    
+    </style>
+
+  </head>
+  <body>
+
+        <div class="wrapper">
+                <div class="box a"><img src="images/cat3.jpg"></div>
+                <div class="box b"><img src="images/cat3.jpg"></div>
+                <div class="box c"><img src="images/cat3.jpg"></div>
+                <div class="box d">
+                  <div class="box e"><img src="images/cat3.jpg"></div>
+                  <div class="box f"><img src="images/cat3.jpg"></div>
+                  <div class="box g"><img src="images/cat3.jpg"></div>
+                </div>
+        </div>
+              
+                
+  </body>
+</html>
